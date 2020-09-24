@@ -1,0 +1,15 @@
+<div class="section">
+    <h1 class="section-title">Projects</h1>
+
+{{ range .Site.Data.projects }}
+    {{ $project := . }}
+    <div class="item group">
+    <div class="item">
+        <div class="flex-row">
+            <h4 class="project-title">{{ .name }}</h4>
+            <span class="date">{{ .date }}</span></div>
+            <p>{{ .details | markdownify }}</p>
+        </div>
+    </div>
+{{ end }}
+</div>

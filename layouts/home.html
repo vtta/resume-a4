@@ -62,6 +62,10 @@
             {{ if .Site.Params.display.interests }}
                 {{ partial "interests" . }}
             {{ end }}
+
+            {{ if .Site.Params.display.address }}
+                {{ partial "address" . }}
+            {{ end }}
         </div>
     </main>
     {{ if .Site.Params.display.footer.footer }}
